@@ -644,7 +644,7 @@
         </view>
         <style>
           <style-rule element='mark'>
-            <encoding attr='color' center='1000.0' field='[federated.197xjjo1dv65ql17uoxlc1s8myub].[sum:Number of Records:qk]' max='2998' type='interpolated' />
+            <encoding attr='color' center='1000' field='[federated.197xjjo1dv65ql17uoxlc1s8myub].[sum:Number of Records:qk]' max='2998' type='interpolated' />
           </style-rule>
         </style>
         <panes>
