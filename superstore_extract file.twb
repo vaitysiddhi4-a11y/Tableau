@@ -15,12 +15,14 @@
     <MapboxVectorStylesAndLayers />
     <MarkAnimation />
     <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
     <ObjectModelTableType />
     <SchemaViewerObjectModel />
     <SetMembershipControl />
     <SheetIdentifierTracking />
     <SortTagCleanup />
     <SpecificWebTargetsForActions />
+    <VConnDownstreamExtractsWithWarnings />
     <WindowsPersistSimpleIdentifiers />
     <_.fcp.WorkbookFingerprinting.true...WorkbookFingerprinting />
     <WorksheetBackgroundTransparency />
@@ -124,7 +126,7 @@
             <aggregation>Count</aggregation>
             <contains-null>true</contains-null>
             <attributes>
-              <attribute datatype='integer' name='context'>3</attribute>
+              <attribute datatype='integer' name='context'>1</attribute>
               <attribute datatype='string' name='gridOrigin'>&quot;A1:U10001:no:A1:U2147483647:0&quot;</attribute>
               <attribute datatype='boolean' name='header'>true</attribute>
               <attribute datatype='integer' name='outcome'>2</attribute>
@@ -2872,6 +2874,368 @@
           <field>[Ship Mode]</field>
         </drill-path>
       </drill-paths>
+      <extract count='-1' enabled='true' object-id='' units='records' user-specific='false'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='C:/Users/MIHIR/Documents/My Tableau Repository/Datasources/Sample - Superstore.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='10/09/2026 03:02:53 AM' username='tableau_internal_user'>
+          <relation type='collection'>
+            <relation name='Orders_ECFCA1FB690A41FE803BC071773BA862' table='[Extract].[Orders_ECFCA1FB690A41FE803BC071773BA862]' type='table' />
+            <relation name='People_D73023733B004CC1B3CB1ACF62F4A965' table='[Extract].[People_D73023733B004CC1B3CB1ACF62F4A965]' type='table' />
+            <relation name='Returns_2AA0FE4D737A4F63970131D0E7480A03' table='[Extract].[Returns_2AA0FE4D737A4F63970131D0E7480A03]' type='table' />
+          </relation>
+          <cols>
+            <map key='[Category]' value='[Orders_ECFCA1FB690A41FE803BC071773BA862].[Category]' />
+            <map key='[City]' value='[Orders_ECFCA1FB690A41FE803BC071773BA862].[City]' />
+            <map key='[Country/Region]' value='[Orders_ECFCA1FB690A41FE803BC071773BA862].[Country/Region]' />
+            <map key='[Customer Name]' value='[Orders_ECFCA1FB690A41FE803BC071773BA862].[Customer Name]' />
+            <map key='[Discount]' value='[Orders_ECFCA1FB690A41FE803BC071773BA862].[Discount]' />
+            <map key='[Order Date]' value='[Orders_ECFCA1FB690A41FE803BC071773BA862].[Order Date]' />
+            <map key='[Order ID (Returns)]' value='[Returns_2AA0FE4D737A4F63970131D0E7480A03].[Order ID]' />
+            <map key='[Order ID]' value='[Orders_ECFCA1FB690A41FE803BC071773BA862].[Order ID]' />
+            <map key='[Postal Code]' value='[Orders_ECFCA1FB690A41FE803BC071773BA862].[Postal Code]' />
+            <map key='[Product Name]' value='[Orders_ECFCA1FB690A41FE803BC071773BA862].[Product Name]' />
+            <map key='[Profit]' value='[Orders_ECFCA1FB690A41FE803BC071773BA862].[Profit]' />
+            <map key='[Quantity]' value='[Orders_ECFCA1FB690A41FE803BC071773BA862].[Quantity]' />
+            <map key='[Region (People)]' value='[People_D73023733B004CC1B3CB1ACF62F4A965].[Region]' />
+            <map key='[Region]' value='[Orders_ECFCA1FB690A41FE803BC071773BA862].[Region]' />
+            <map key='[Regional Manager]' value='[People_D73023733B004CC1B3CB1ACF62F4A965].[Regional Manager]' />
+            <map key='[Returned]' value='[Returns_2AA0FE4D737A4F63970131D0E7480A03].[Returned]' />
+            <map key='[Sales]' value='[Orders_ECFCA1FB690A41FE803BC071773BA862].[Sales]' />
+            <map key='[Segment]' value='[Orders_ECFCA1FB690A41FE803BC071773BA862].[Segment]' />
+            <map key='[Ship Date]' value='[Orders_ECFCA1FB690A41FE803BC071773BA862].[Ship Date]' />
+            <map key='[Ship Mode]' value='[Orders_ECFCA1FB690A41FE803BC071773BA862].[Ship Mode]' />
+            <map key='[State/Province]' value='[Orders_ECFCA1FB690A41FE803BC071773BA862].[State/Province]' />
+            <map key='[Sub-Category]' value='[Orders_ECFCA1FB690A41FE803BC071773BA862].[Sub-Category]' />
+          </cols>
+          <refresh>
+            <refresh-event add-from-file-path='Sample - Superstore' increment-value='%null%' refresh-type='create' rows-inserted='10494' timestamp-start='2026-10-09 03:02:51.733' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Order ID</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Order ID]</local-name>
+              <parent-name>[Orders_ECFCA1FB690A41FE803BC071773BA862]</parent-name>
+              <remote-alias>Order ID</remote-alias>
+              <ordinal>0</ordinal>
+              <family>Orders</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3384</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[Orders_ECFCA1FB690A41FE803BC071773BA862]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Order Date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[Order Date]</local-name>
+              <parent-name>[Orders_ECFCA1FB690A41FE803BC071773BA862]</parent-name>
+              <remote-alias>Order Date</remote-alias>
+              <ordinal>1</ordinal>
+              <family>Orders</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>1478</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Orders_ECFCA1FB690A41FE803BC071773BA862]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Ship Date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[Ship Date]</local-name>
+              <parent-name>[Orders_ECFCA1FB690A41FE803BC071773BA862]</parent-name>
+              <remote-alias>Ship Date</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Orders</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>1399</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Orders_ECFCA1FB690A41FE803BC071773BA862]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Ship Mode</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Ship Mode]</local-name>
+              <parent-name>[Orders_ECFCA1FB690A41FE803BC071773BA862]</parent-name>
+              <remote-alias>Ship Mode</remote-alias>
+              <ordinal>3</ordinal>
+              <family>Orders</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[Orders_ECFCA1FB690A41FE803BC071773BA862]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Customer Name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Customer Name]</local-name>
+              <parent-name>[Orders_ECFCA1FB690A41FE803BC071773BA862]</parent-name>
+              <remote-alias>Customer Name</remote-alias>
+              <ordinal>4</ordinal>
+              <family>Orders</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1175</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[Orders_ECFCA1FB690A41FE803BC071773BA862]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Segment</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Segment]</local-name>
+              <parent-name>[Orders_ECFCA1FB690A41FE803BC071773BA862]</parent-name>
+              <remote-alias>Segment</remote-alias>
+              <ordinal>5</ordinal>
+              <family>Orders</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[Orders_ECFCA1FB690A41FE803BC071773BA862]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Country/Region</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Country/Region]</local-name>
+              <parent-name>[Orders_ECFCA1FB690A41FE803BC071773BA862]</parent-name>
+              <remote-alias>Country/Region</remote-alias>
+              <ordinal>6</ordinal>
+              <family>Orders</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[Orders_ECFCA1FB690A41FE803BC071773BA862]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>City</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[City]</local-name>
+              <parent-name>[Orders_ECFCA1FB690A41FE803BC071773BA862]</parent-name>
+              <remote-alias>City</remote-alias>
+              <ordinal>7</ordinal>
+              <family>Orders</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>592</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[Orders_ECFCA1FB690A41FE803BC071773BA862]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>State/Province</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[State/Province]</local-name>
+              <parent-name>[Orders_ECFCA1FB690A41FE803BC071773BA862]</parent-name>
+              <remote-alias>State/Province</remote-alias>
+              <ordinal>8</ordinal>
+              <family>Orders</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>62</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[Orders_ECFCA1FB690A41FE803BC071773BA862]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Postal Code</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Postal Code]</local-name>
+              <parent-name>[Orders_ECFCA1FB690A41FE803BC071773BA862]</parent-name>
+              <remote-alias>Postal Code</remote-alias>
+              <ordinal>9</ordinal>
+              <family>Orders</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>711</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[Orders_ECFCA1FB690A41FE803BC071773BA862]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Region</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Region]</local-name>
+              <parent-name>[Orders_ECFCA1FB690A41FE803BC071773BA862]</parent-name>
+              <remote-alias>Region</remote-alias>
+              <ordinal>10</ordinal>
+              <family>Orders</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[Orders_ECFCA1FB690A41FE803BC071773BA862]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Category</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Category]</local-name>
+              <parent-name>[Orders_ECFCA1FB690A41FE803BC071773BA862]</parent-name>
+              <remote-alias>Category</remote-alias>
+              <ordinal>11</ordinal>
+              <family>Orders</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[Orders_ECFCA1FB690A41FE803BC071773BA862]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Sub-Category</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Sub-Category]</local-name>
+              <parent-name>[Orders_ECFCA1FB690A41FE803BC071773BA862]</parent-name>
+              <remote-alias>Sub-Category</remote-alias>
+              <ordinal>12</ordinal>
+              <family>Orders</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>17</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[Orders_ECFCA1FB690A41FE803BC071773BA862]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Product Name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Product Name]</local-name>
+              <parent-name>[Orders_ECFCA1FB690A41FE803BC071773BA862]</parent-name>
+              <remote-alias>Product Name</remote-alias>
+              <ordinal>13</ordinal>
+              <family>Orders</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2094</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[Orders_ECFCA1FB690A41FE803BC071773BA862]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Sales</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Sales]</local-name>
+              <parent-name>[Orders_ECFCA1FB690A41FE803BC071773BA862]</parent-name>
+              <remote-alias>Sales</remote-alias>
+              <ordinal>14</ordinal>
+              <family>Orders</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3373</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Orders_ECFCA1FB690A41FE803BC071773BA862]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Quantity</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Quantity]</local-name>
+              <parent-name>[Orders_ECFCA1FB690A41FE803BC071773BA862]</parent-name>
+              <remote-alias>Quantity</remote-alias>
+              <ordinal>15</ordinal>
+              <family>Orders</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>16</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Orders_ECFCA1FB690A41FE803BC071773BA862]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Discount</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Discount]</local-name>
+              <parent-name>[Orders_ECFCA1FB690A41FE803BC071773BA862]</parent-name>
+              <remote-alias>Discount</remote-alias>
+              <ordinal>16</ordinal>
+              <family>Orders</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>12</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Orders_ECFCA1FB690A41FE803BC071773BA862]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Profit</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Profit]</local-name>
+              <parent-name>[Orders_ECFCA1FB690A41FE803BC071773BA862]</parent-name>
+              <remote-alias>Profit</remote-alias>
+              <ordinal>17</ordinal>
+              <family>Orders</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3856</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Orders_ECFCA1FB690A41FE803BC071773BA862]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Regional Manager</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Regional Manager]</local-name>
+              <parent-name>[People_D73023733B004CC1B3CB1ACF62F4A965]</parent-name>
+              <remote-alias>Regional Manager</remote-alias>
+              <ordinal>18</ordinal>
+              <family>People</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[People_D73023733B004CC1B3CB1ACF62F4A965]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Region</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Region (People)]</local-name>
+              <parent-name>[People_D73023733B004CC1B3CB1ACF62F4A965]</parent-name>
+              <remote-alias>Region</remote-alias>
+              <ordinal>19</ordinal>
+              <family>People</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[People_D73023733B004CC1B3CB1ACF62F4A965]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Order ID</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Order ID (Returns)]</local-name>
+              <parent-name>[Returns_2AA0FE4D737A4F63970131D0E7480A03]</parent-name>
+              <remote-alias>Order ID</remote-alias>
+              <ordinal>20</ordinal>
+              <family>Returns</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>296</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[Returns_2AA0FE4D737A4F63970131D0E7480A03]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Returned</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Returned]</local-name>
+              <parent-name>[Returns_2AA0FE4D737A4F63970131D0E7480A03]</parent-name>
+              <remote-alias>Returned</remote-alias>
+              <ordinal>21</ordinal>
+              <family>Returns</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[Returns_2AA0FE4D737A4F63970131D0E7480A03]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
       <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
       <style>
         <style-rule element='mark'>
@@ -2964,6 +3328,9 @@
                 </columns>
               </relation>
             </properties>
+            <properties context='extract'>
+              <relation name='Orders_ECFCA1FB690A41FE803BC071773BA862' table='[Extract].[Orders_ECFCA1FB690A41FE803BC071773BA862]' type='table' />
+            </properties>
           </object>
           <object caption='People' id='People_D73023733B004CC1B3CB1ACF62F4A965'>
             <properties context=''>
@@ -2974,6 +3341,9 @@
                 </columns>
               </relation>
             </properties>
+            <properties context='extract'>
+              <relation name='People_D73023733B004CC1B3CB1ACF62F4A965' table='[Extract].[People_D73023733B004CC1B3CB1ACF62F4A965]' type='table' />
+            </properties>
           </object>
           <object caption='Returns' id='Returns_2AA0FE4D737A4F63970131D0E7480A03'>
             <properties context=''>
@@ -2983,6 +3353,9 @@
                   <column datatype='string' name='Returned' ordinal='1' />
                 </columns>
               </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Returns_2AA0FE4D737A4F63970131D0E7480A03' table='[Extract].[Returns_2AA0FE4D737A4F63970131D0E7480A03]' type='table' />
             </properties>
           </object>
         </objects>
@@ -4121,8 +4494,8 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='700' minheight='700' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='14' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='98000' id='13' param='vert' type-v2='layout-flow' w='99000' x='500' y='1000'>
+            <zone h='100000' id='16' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='15' param='vert' type-v2='layout-flow' w='99000' x='500' y='1000'>
                 <zone fixed-size='280' h='92250' id='3' is-fixed='true' name='Sheet 7' w='38125' x='3125' y='6250'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
@@ -4188,8 +4561,8 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='700' minheight='700' sizing-mode='vscroll' />
           <zones>
-            <zone h='100000' id='9' type-v2='layout-basic' w='100000' x='0' y='0'>
-              <zone h='98000' id='8' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
+            <zone h='100000' id='11' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98000' id='10' param='vert' type-v2='layout-flow' w='98400' x='800' y='1000'>
                 <zone h='206500' id='5' mode='checkdropdown' name='citywise sales' param='[Sample - Superstore].[none:State/Province:nk]' type-v2='filter' values='cascading' w='16000' x='84300' y='1625'>
                   <zone-style>
                     <format attr='border-color' value='#000000' />
